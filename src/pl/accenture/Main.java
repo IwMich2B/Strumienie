@@ -72,6 +72,7 @@ Stream.<String>builder()
     }
 }
 class Person{
+    // zmiana lokalnie
     String name;
     int age;
 
