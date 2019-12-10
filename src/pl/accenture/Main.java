@@ -1,5 +1,7 @@
 package pl.accenture;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
@@ -36,6 +38,33 @@ Stream.<String>builder()
         new Person("Marysia",55),
         new Person("Lukasz",44));
         people.stream().filter(nameStartWithPredicate.and(ageBelow20Predicate)).collect(Collectors.toList()).forEach(s-> System.out.println(s));
+        System.out.println("Zajecia z poniedziałku");
+        List<String> upperCaseList = Arrays.asList("A","B","C","D");
+        List<String> lowerCaseList= upperCaseList.stream().map(String::toLowerCase).collect(Collectors.toList());
+        System.out.println(upperCaseList);
+        System.out.println(lowerCaseList);
+
+        Person2 person2A = new Person2("Arek","Kowalski");
+        Person2 person2B = new Person2("Basia","Zawadezka");
+        Person2 person2C = new Person2("Aneta","Jasińska");
+        Person2 person2G = new Person2("Iwona","Michalak");
+        Person2 person2H = new Person2("Marta","Sobońi");
+        List<Person2> person2List = Arrays.asList(person2A,person2B,person2C,person2G,person2H);
+        List<String> peopleNames = person2List.stream().map(p -> p.name).collect(Collectors.toList());
+        System.out.println(person2List);
+        System.out.println(peopleNames);
+        List<Person2> uperCase = person2List.stream().map(p -> new Person2(p.name.toUpperCase(),p.lastName.toUpperCase())) .collect(Collectors.toList());
+        System.out.println(uperCase);
+        String[][] data = new String[][]{{"a","b"},{"c","d"},{"e","f"},{"e","f"}};
+
+        Stream<String[] > streamTablic = Arrays.stream(data);
+        Stream<String> strumieniStringow = streamTablic.flatMap(arr-> Arrays.stream(arr));
+        System.out.println(strumieniStringow);
+        System.out.println("Odfiltrowanie e");
+        strumieniStringow.filter(s->s.equals("e")).map(String::toUpperCase).forEach(System.out::println);
+
+        //zmiana wielkiej litery
+
 
     }
     static void myVararg(String ... s){
