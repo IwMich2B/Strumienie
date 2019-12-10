@@ -1,7 +1,6 @@
 package pl.accenture;
+// napisanie innej adnotacji
 
-// zmiana lokalna
-// zmiany zdalnie
 public class Person2 {
     String name;
     String lastName;
