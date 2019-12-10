@@ -4,6 +4,7 @@ package pl.accenture;
 public class Person2 {
     String name;
     String lastName;
+    // konstruktor z dwoma parametrami
 
     public Person2(String name, String lastName) {
         this.name = name;
