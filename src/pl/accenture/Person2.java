@@ -1,6 +1,7 @@
 package pl.accenture;
 // napisanie innej adnotacji
 
+
 public class Person2 {
     String name;
     String lastName;
