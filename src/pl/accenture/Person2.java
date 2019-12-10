@@ -1,6 +1,6 @@
 package pl.accenture;
 
-
+// zmiana lokalna
 public class Person2 {
     String name;
     String lastName;
