@@ -1,6 +1,6 @@
 package pl.accenture;
 
-
+// zmiany zdalnie
 public class Person2 {
     String name;
     String lastName;
