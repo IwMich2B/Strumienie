@@ -1,4 +1,5 @@
 package pl.accenture;
+// zmiana w klasie person
 
 public class Person2 {
     String name;
